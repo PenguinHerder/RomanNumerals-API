@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('convert/{number}', 'RomanController@convert')->where('number', '[0-9]+');
+Route::get('convert/recent', 'RomanController@recent');
+Route::get('convert/top', 'RomanController@top');
+		
